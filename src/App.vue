@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{ hello }}</h1>
+    <ThreadList />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ThreadList from './components/ThreadList.vue'
 
+// the stuff below essentially controls the template tags output
 export default {
   name: 'app',
+  data() {
+    return {
+      hello: "Conversation Starter"
+    }
+  },
   components: {
-    HelloWorld
+    ThreadList
   }
 }
 </script>
