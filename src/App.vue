@@ -1,31 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <router-link :to="{ name: 'home' }">
+      <img alt="Vue logo" src="./assets/logo.png" />
+    </router-link>
     <h1>{{ hello }}</h1>
-    <ThreadList />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ThreadList from './components/ThreadList.vue'
-
 // the stuff below essentially controls the template tags output
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
       hello: "Conversation Starter"
-    }
-  },
-  components: {
-    ThreadList
+    };
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
